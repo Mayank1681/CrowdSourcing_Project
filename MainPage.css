@@ -13,12 +13,21 @@ body {
     background-color: #f1f1f1;
     position: fixed;
     height: 100%;
-    overflow: auto;
+    position: absolute;
+    z-index: 2;
+    border: 1px solid #e5e5e5;
+}
+.myTop{
+    padding: 120px 110px;
+    background-color: #2886af;
+    color: white;
+    font-family: ProximaNova-Semibold;
+    font-size: 40px;
 }
 .sidebar a {
     display: block;
     color: black;
-    padding: 16px;
+    padding: 30px;
     text-decoration: none;
     font-family: ProximaNova-Semibold;
 }
@@ -32,8 +41,7 @@ body {
 }
 div.content {
     margin-left: 300px;
-    padding: 1px 16px;
-    height: 1000px;
+    height: 100%;
 }
 @media screen and (max-width: 700px) {
     .sidebar {
