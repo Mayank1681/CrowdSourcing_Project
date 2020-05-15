@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="MainPage.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <!-- The sidebar -->
     <div class="sidebar">
         <a class="active" href="#home">Home</a>
-        <a href="#addquestion">Add Question+</a>
+        <button type="button" class="mainPageModal" data-toggle="modal" data-target="#myModal">Add Question+</button>
         <a href="#expertpanel">Expert Panel</a>
         <a href="#createmodalpaper">Create A Modal Paper</a>
         <a href="#aboutus">About Us</a>
@@ -21,6 +24,63 @@
         <div class="contentHeading">
             <div class="myTop">
                 Crowd Sourcing platform for preparing large question banks.
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+    
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add Question</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row selectionProcess">
+                        <div class="col-sm-4 alignment custom-select">
+                            <select class="selectpicker" id="Class" >Class
+                                <option value="none">Select Class</option> 
+                                <!--option value="Class 10th">Class 10th</option-->
+                                <option value="Class 11th">Class 11th</option>
+                                <option value="Class 12th">Class 12th</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4 alignment custom-select">
+                            <select class="selectpicker" id="subject">Subject
+                                <option value="none">Select Subject</option> 
+                                <option value="English">English</option>
+                                <!--option value="Hindi">Hindi</option-->
+                                <option value="Maths">Maths</option>
+                                <option value="Physics">Physics</option> 
+                                <option value="chemistry">chemistry</option>
+                                <option value="Biology">Biology</option>  
+                            </select>
+                        </div>
+                        <div class="col-sm-4 alignment custom-select">
+                            <select class="selectpicker" id="marks" >Marks
+                                <option value="0">Select Marks</option> 
+                                <option value="2">2</option>
+                                <option value="4">4</option>
+                                <option value="6">6</option>
+                                <option value="8">8</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="questionTextArea">
+                    <textarea rows="5" cols="73" id="question" placeholder="Submit Your Question"></textarea>
+                </div>
+                <div class="answerTextArea">
+                    <textarea rows="5" cols="73" id="question" placeholder="Submit Your Answer"></textarea>
+                </div>
+                <div class="submitArea">
+                    <div class="submitButton">
+                        Submit
+                    </div>
+                </div>
             </div>
         </div>
     </div>

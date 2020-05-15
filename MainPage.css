@@ -2,6 +2,10 @@
     font-family: ProximaNova-Semibold;
     src: url(./Assets/Fonts/ProximaNova-Semibold.otf);
 }
+@font-face{
+    font-family: ProximaNova-Regular;
+    src: url(./Assets/Fonts/ProximaNova-Regular.otf);
+}
 body {
     margin: 0;
     /* font-family: "Lato", sans-serif; */
@@ -16,6 +20,7 @@ body {
     position: absolute;
     z-index: 2;
     border: 1px solid #e5e5e5;
+    font-size: 17px;
 }
 .myTop{
     padding: 120px 110px;
@@ -31,13 +36,36 @@ body {
     text-decoration: none;
     font-family: ProximaNova-Semibold;
 }
+.sidebar button {
+    display: block;
+    color: black;
+    padding: 30px;
+    text-decoration: none;
+    font-family: ProximaNova-Semibold;
+    border: none;
+    width: -webkit-fill-available;
+    background-color: #f1f1f1;
+    text-align: left;
+}
 .sidebar a.active {
     background-color: #2886af;
+    color: white;
+    text-decoration: none;
+}
+.sidebar a:visited {
+    text-decoration: none;
+}
+.sidebar a:focus {
+    text-decoration: none;
+}
+.sidebar button:hover:not(.active) {
+    background-color: #555;
     color: white;
 }
 .sidebar a:hover:not(.active) {
     background-color: #555;
     color: white;
+    text-decoration: none;
 }
 div.content {
     margin-left: 300px;
@@ -57,4 +85,54 @@ div.content {
       text-align: center;
       float: none;
     }
+}
+.modal-header {
+    background-color: #2886af;
+    color: white;
+    text-align: center;
+}
+.modal-title {
+    font-family: ProximaNova-Semibold;
+    font-size: 20px;
+}
+.modal-header button {
+    font-size: 30px;
+}
+.alignment {
+    text-align: center;
+}
+.custom-select {
+    position: relative;
+    font-family: ProximaNova-Semibold;
+}
+.selectpicker { 
+    padding: 10px;
+    background-color: #939393;
+    color: white;
+    border-radius: 5px;
+}
+.questionTextArea {
+    padding: 10px;
+}
+.answerTextArea {
+    padding: 10px;
+}
+.submitArea {
+    padding: 10px;
+    text-align: -webkit-center;
+}
+.submitButton {
+    background-color: #2886af;
+    color: white;
+    font-family: ProximaNova-Semibold;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 100px;
+    cursor: pointer;
+}
+::placeholder {
+    font-size: 17px;
+    font-family: ProximaNova-Regular;  
 }
